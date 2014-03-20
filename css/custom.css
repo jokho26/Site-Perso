@@ -54,6 +54,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
     text-transform: uppercase;
     padding-left: 0px;
+    margin: 0 0 0 -180px;
+    background-color: rgba(100, 100, 100, 1);
+    border-radius: 5px;
 }
 
 .title:hover {
@@ -61,13 +64,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .title .glyphicon {
-    background-color: rgba(0, 0, 0, 0.75);
+    /*background-color: rgba(0, 0, 0, 0.75);*/
     color: #fff;
     left: -110px;
     padding: 10px;
-    -webkit-border-radius: 20px;
+    /*-webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-    border-radius: 20px;
+    border-radius: 20px;*/
     font-size: smaller;
 }
 
@@ -156,7 +159,7 @@ strong {
 }
 
 ul {
-    padding: 10px 0 0 13px;
+    padding: 0 0 0 14px;
     margin: 0;
     border-left: 3px solid rgba(0, 0, 0, 0.05);
 }
@@ -195,11 +198,16 @@ ul .description {
 }
 
 .title {
-    list-style-image: url('../img/ls.png') !important;
+    /*list-style-image: url('../img/ls.png') !important;*/
+    list-style-image: inherit;
+    list-style-type: none; 
+    color: #fff;
+    border-left: inherit;
 }
 
 .title:hover {
-    padding-left: 0px !important;
+    list-style-image: inherit;
+    padding-left: 10px !important;
 }
 
 /* Top icons ------------------------------------------------- */
@@ -418,7 +426,7 @@ nav .active a {
 
 /* Profile ------------------------------------------------- */
 
-.profile .title .glyphicon{
+.profile .title{
     background-color: #9300ff;
 }
 
