@@ -680,8 +680,14 @@ form .glyphicon {
 }
 
 #cartouche-header {
-    margin-left: 16.6667%;
-    width:66.6666%;
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+    /*
+    width:50.6666%;
+    margin-left: 35.6667%;
+    margin-right: 35.6667%;
+    */
 }
 
 .portrait {
