@@ -678,3 +678,31 @@ form .glyphicon {
 #separation {
     padding-bottom: 40px;
 }
+
+#cartouche-header {
+    margin-left: 16.6667%;
+    width:66.6666%;
+}
+
+.portrait {
+    height: 250px;
+    margin: 10px 30px 10px 10px;
+    border: 5px solid rgba(0, 0, 0, 0.08);
+      float: left;
+}
+
+#nom {
+    padding: 50px 10px 10px 10px;
+    padding-left: 100px;
+    font-size:35px;
+}
+
+#poste {
+    padding: 0px 10px 10px 10px;
+    padding-left: 100px;
+    font-size: 20px;
+}
+
+.btn-cartouche {
+    font-size: 18px;
+}
