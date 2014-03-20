@@ -674,3 +674,7 @@ form .glyphicon {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
+#separation {
+    padding-bottom: 40px;
+}
