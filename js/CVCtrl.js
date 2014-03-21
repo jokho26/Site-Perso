@@ -56,14 +56,30 @@ angular.module('project', ['ngSanitize'])
 
         comp : {
             title : "Compétences",
-            nav_title : "Compétences"
+            nav_title : "Compétences",
+
+            lang_prog : "Langages de programmation",
+
+            conception_gdp : "Conception & gestion de projet",
+        
+            patrons : "Patrons de conception",
+            test_u : "Tests unitaires"
         },
 
         /* Travaux et projets */
         
         trav_pro : {
             title : "Travaux et projets",
-            nav_title : "Travaux et projets"
+            nav_title : "Travaux et projets",
+
+            run_title : "Application mobile pour l'analyse de performances sportives",
+            run_description : "Application mobile développée en HTML5, utilisant le framework PhoneGap/Cordova afin de produire une application multiplateforme Android et iOS pour le suivi et l'analyse de performance sportives (courses à pieds, séances d'entrainement, vélo ...).",
+
+            miage_title : "Site de la formation MIAGE de Nice-Sophia Antipolis",
+            miage_description : "Site de la MIAGE de Nice-Sophia Antipolis avec modules Javascript/Jquery/PHP liés aux inscriptions et stages.",
+        
+            voyance_title : "Site de voyance en ligne",
+            voyance_description : "ite de voyance avec modules Javascript/Jquery interactifs liés à la voyance."
         },
 
         /* Contact */
