@@ -432,37 +432,38 @@ nav .active a {
 
 /* Work experience ------------------------------------------------- */
 
-.work-experience .title .glyphicon{
+.work-experience .title{
     background-color: #00a7ff;
 }
 
 /* Education ------------------------------------------------- */
 
-.education .title .glyphicon{
+.education .title{
     background-color: #07b500;
 }
 
+
 /* Professional skills ------------------------------------------------- */
 
-.professional-skills .title .glyphicon{
+.professional-skills .title {
     background-color: #ffa700;
 }
 
 /* Personal skills ------------------------------------------------- */
 
-.personal-skills .title .glyphicon{
+.personal-skills .title {
     background-color: #00aca5;
 }
 
 /* Interests ------------------------------------------------- */
 
-.interests .title .glyphicon{
+.interests .title {
     background-color: #f00;
 }
 
 /* Portfolio ------------------------------------------------ */
 
-.portfolio .title .glyphicon{
+.portfolio .title {
     background-color: #0089ff;
 }
 
@@ -520,7 +521,7 @@ nav .active a {
 
 /* Contact Form ------------------------------------------------ */
 
-.contact .title .glyphicon{
+.contact .title {
     background-color: #00c60f;
 }
 
@@ -617,7 +618,7 @@ form .glyphicon {
 
 /* Up ------------------------------------------------ */
 
-.contact .title.up .glyphicon{
+.contact .title.up {
     background-color: #ffad00;
 }
 
@@ -711,4 +712,11 @@ form .glyphicon {
 
 .btn-cartouche {
     font-size: 18px;
+}
+
+.date {
+	margin-left:-200px;
+	float:left;
+	opacity: 0.75;
+    text-transform: uppercase;
 }
