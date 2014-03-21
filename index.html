@@ -65,9 +65,14 @@
     </ul>
 </nav>
 <!-- end Navigation -->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <button ng-click="langueFr()">Français</button>
-<button ng-click="langueEn()">Anglais</button>
+
+<!-- Langues -->
+<div id="langues">
+    {{tab_lang.langue.title}} : 
+    <img ng-click="langueFr()" src="./img/drap_fr.jpg">
+    <img ng-click="langueEn()" src="./img/drap_en.jpg">
+</div>
+
 <!-- Navigation for small devices -->
 <nav id="mini-nav" class="spy visible-sm visible-xs">
     <ul>
@@ -105,13 +110,13 @@
 <div id="cartouche-header">
     <img src="img/face2.jpg" class="portrait">
     <div id="nom"><b>Steven SIDDI</b></div>
-    <div id="poste"><i>Étudiant et développeur Java/Web</i></div>
+    <div id="poste"><i>{{tab_lang.cartouche.titre}}</i></div>
     </br>
     <a href="mailto:steven.siddi@gmail.com" target="navigateur">
     <i class="fa fa-envelope"></i> steven.siddi@gmail.com</a>
     </br></br></br>
     <a class="btn btn-large btn-primary btn-cartouche" href="http://fr.linkedin.com/pub/steven-siddi/40/323/a2" target="navigateur"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
-	<a class="btn btn-large btn-primary btn-cartouche" href="./CV.pdf" target="navigateur"><i class="glyphicon glyphicon-cloud-download"></i> CV</a>
+	<a class="btn btn-large btn-primary btn-cartouche" href="./CV.pdf" target="navigateur"><i class="glyphicon glyphicon-cloud-download"></i>{{tab_lang.cartouche.CV}}</a>
 </div>
 </br></br></br></br></br></br>
 
@@ -302,7 +307,7 @@
                     <li class="title"><span class="glyphicon glyphicon-stats"></span>{{tab_lang.trav_pro.title}}</li>
                      <li>
                         <a target="navigateur" href="https://github.com/haxakl/RunBelievable">
-                            <img src="./img/cordova_bot.png" class="img-projet">
+                            <img src="./img/cordova.png" class="img-projet2">
                         </a>
                         <div class="description-projet">
                             <p><strong>{{tab_lang.trav_pro.run_title}}</strong></p>
@@ -315,7 +320,7 @@
                     </li>
 					<li>
                         <a target="navigateur" href="http://miage.unice.fr/">
-                            <img src="./img/site-miage.png" class="img-projet">
+                            <img src="./img/site-miage.jpg" class="img-projet">
                         </a>
                         <div class="description-projet">
                             <p><strong>{{tab_lang.trav_pro.miage_title}}</strong></p>
@@ -330,7 +335,7 @@
                     <section id="separation">
                     <li>
                         <a target="navigateur" href="http://votre-voyance-en-ligne.net/">
-                            <img src="./img/site-voyance.png" class="img-projet">
+                            <img src="./img/site-voyance.jpg" class="img-projet">
                         </a>
                         <div class="description-projet">
                             <p><strong>{{tab_lang.trav_pro.voyance_title}}</strong></p>
@@ -435,7 +440,7 @@
         <div class="row">
             <div class="col-sm-7 col-sm-offset-5">
                 <ul>
-                    <li class="title"><span class="glyphicon glyphicon-envelope"></span>Me contacter</li>
+                    <li class="title"><span class="glyphicon glyphicon-envelope"></span>{{tab_lang.contact.title}}</li>
                     <section id="separation">
                     <li class="static">
                         <span class="note">Email</span>
@@ -446,25 +451,25 @@
                         <form action="http://go3.nazwa.pl/resume-timeline/contact.php" method="post">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                <input name="yourname" type="text" class="form-control" id="inputname" placeholder="Votre nom">
+                                <input name="yourname" type="text" class="form-control" id="inputname" placeholder="{{tab_lang.contact.nom}}">
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                                <input name="email" type="email" class="form-control" id="inputemail" placeholder="Votre email">
+                                <input name="email" type="email" class="form-control" id="inputemail" placeholder="{{tab_lang.contact.email}}">
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-bold"></span></span>
-                                <input name="subject" type="text" class="form-control" id="inputsubject" placeholder="Sujet">
+                                <input name="subject" type="text" class="form-control" id="inputsubject" placeholder="{{tab_lang.contact.sujet}}">
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-comment"></span></span>
-                                <textarea name="comments" class="form-control" id="inputmessage" rows="3" placeholder="Votre message ici ..."></textarea>
+                                <textarea name="comments" class="form-control" id="inputmessage" rows="3" placeholder="{{tab_lang.contact.message}}"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success pull-right"><span class="glyphicon glyphicon-send"></span> Envoyer</button>
+                            <button type="submit" class="btn btn-success pull-right"><span class="glyphicon glyphicon-send"></span>{{tab_lang.contact.envoyer}}</button>
                         </form>
                     </li>
                     </section>
-                    <li class="title up"><span class="glyphicon glyphicon-arrow-up"></span>haut</li>
+                    <li class="title up"><span class="glyphicon glyphicon-arrow-up"></span>{{tab_lang.haut.title}}</li>
                 </ul>
             </div>
         </div>
