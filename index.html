@@ -5,7 +5,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 
-<html class="not-ie" lang="en">
+<html ng-app="project">
 <!--<![endif]-->
     
 <head>
@@ -29,47 +29,56 @@
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/modernizr.js" type="text/javascript"></script>
 
+<!-- Lib angular et controlers -->
+<script src="js/angular.min.js" type="text/javascript"></script>
+<script src="js/CVCtrl.js" type="text/javascript"></script>
+<script src="js/angular-sanitize.min.js"></script>
+
 </head>
-<body>
+<body ng-controller="CVCtrl">
 
 <!-- Settings -->
 <!--
 <div class="settings">
     <span class="glyphicon glyphicon-cog"></span>
-    <a class="btn active top-white">White theme</a>
+    <a class="btn active top-white">White theme</a>   
     <a class="btn top-dark">Dark theme</a>
-</div>-->
+</div>-->                                              
 <!-- end Settings -->
 
 <!-- Top icons -->
-<a class="top-menu hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Menu toggle"><span class="glyphicon glyphicon-th-list"></span></a>
-<a href="#" class="top-download-resume hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Download resume"><span class="glyphicon glyphicon-cloud-download"></span></a>
-<a class="top-contact hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Contact me"><span class="glyphicon glyphicon-send"></span></a>
+<a class="top-menu hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Afficher/Masquer le menu"><span class="glyphicon glyphicon-th-list"></span></a>
+<a href="#" class="top-download-resume hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Télécharger mon CV"><span class="glyphicon glyphicon-cloud-download"></span></a>
+<a class="top-contact hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Me contacter"><span class="glyphicon glyphicon-send"></span></a>
 <!-- end Top icons -->
+
+
 
 <!-- Navigation -->
 <nav id="spy" class="spy hidden-sm hidden-xs">
     <ul>
-        <li class="active"><a href="#work-experience">Expériences</br>professionnelles</a></li>
-        <li><a href="#education">FORMATIONS &</br>Certifications</a></li>
-        <li><a href="#professional-skills">Compétences</a></li>
-        <li><a href="#personal-skills">Travaux et projets</a></li>
-        <li><a href="#contact">Me contacter</a></li>
+        <li class="active"><a href="#work-experience" ng-bind-html="tab_lang.experience_pro.nav_title"></a></li>
+        <li><a href="#education" ng-bind-html="tab_lang.forma_certif.nav_title"></a></li>
+        <li><a href="#professional-skills" ng-bind-html="tab_lang.comp.nav_title"></a></li>
+        <li><a href="#personal-skills" ng-bind-html="tab_lang.trav_pro.nav_title"></a></li>
+        <li><a href="#contact" ng-bind-html="tab_lang.contact.nav_title"> </a></li>
     </ul>
 </nav>
 <!-- end Navigation -->
-    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button ng-click="langueFr()">Français</button>
+<button ng-click="langueEn()">Anglais</button>
 <!-- Navigation for small devices -->
 <nav id="mini-nav" class="spy visible-sm visible-xs">
     <ul>
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown">Menu</a>
             <ul class="dropdown-menu">
-                <li class="active"><a href="#work-experience">Expériences professionnelles</a></li>
-                <li><a href="#education">FORMATIONS & Certifications</a></li>
-                <li><a href="#professional-skills">Compétences</a></li>
-                <li><a href="#personal-skills">Travaux et projets</a></li>
-                <li><a href="#contact">Me contacter</a></li>
+                <li class="active"><a href="#work-experience">{{tab_lang.experience_pro.title}}</a></li>
+                <li><a href="#education">{{tab_lang.forma_certif.title}}</a></li>
+                <li><a href="#professional-skills">{{tab_lang.comp.title}}</a></li>
+                <li><a href="#personal-skills">{{tab_lang.trav_pro.title}}</a></li>
+                <li><a href="#contact">{{tab_lang.contact.title}}</a></li>
             </ul>
         </li>
       </ul>
@@ -143,32 +152,27 @@
         <div class="row">
             <div class="col-sm-7 col-sm-offset-5">
                 <ul>
-                    <li class="title"><span class="glyphicon glyphicon-briefcase"></span>Expériences professionnelles</li>
+                    <li class="title"><span class="glyphicon glyphicon-briefcase"></span>{{tab_lang.experience_pro.title}}</li>
                     <li>
                         <!-- Ajouter les sites -->
-						<p  class="date">2013 - En cours</p>
-                        <p><strong>DEVELOPPEUR WEB</strong></p>
+						<p  class="date">{{tab_lang.experience_pro.dev_web_date}}</p>
+                        <p><strong>{{tab_lang.experience_pro.dev_web_title}}</strong></p>
 						
-						<span class="note">Junior Entreprise – Junior MIAGE Concept – Biot, France</span>
-                        <p class="description">Développement de sites web avec modules Javascript/PHP pour des clients de Junior MIAGE Concept.</p>
+						<span class="note">{{tab_lang.experience_pro.dev_web_note}}</span>
+                        <p class="description">{{tab_lang.experience_pro.dev_web_description}}</p>
                     </li>
                     <li>
-						<p  class="date">Mai - Août 2013</p>
-                        <p><strong>DEVELOPPEUR JAVA</strong></p>
-						<span class="note">Stage - Convers Télémarketing - Nice, France</span>
-                        <p class="description">Conception et développement du programme de gestion des ressources humaines pour l'entreprise en Java (MVC).</br>
-							Utilisation de technologies de bases de données comme SQL et JDBC.</br>
-							Conception et développements de programmes annexes en Java.</p>
+						<p  class="date">{{tab_lang.experience_pro.dev_java1_date}}</p>
+                        <p><strong>{{tab_lang.experience_pro.dev_java1_title}}</strong></p>
+						<span class="note">{{tab_lang.experience_pro.dev_java1_note}}</span>
+                        <p class="description" ng-bind-html="tab_lang.experience_pro.dev_java1_description"></p>
                     </li>
                     <section id="separation">
 					<li>
-						<p  class="date">Avril - Juillet 2012</p>
-                        <p><strong>DEVELOPPEUR JAVA</strong></p>
-						<span class="note">Stage - Convers Télémarketing - Nice, France</span>
-                        <p class="description">Conception et développement de programmes internes Java (MVC).</br>
-							Développement de composants graphiques et modules Java et intégration dans tous les logiciels existants de l'entreprise.</br>
-							Utilisation de IReport couplé avec JasperReport.</br>
-							Utilisation de technologies de bases de données comme SQL et JDBC.</p>
+						<p  class="date">{{tab_lang.experience_pro.dev_java2_date}}</p>
+                        <p><strong>{{tab_lang.experience_pro.dev_java2_title}}</strong></p>
+						<span class="note">{{tab_lang.experience_pro.dev_java2_note}}</span>
+                        <p class="description" ng-bind-html="tab_lang.experience_pro.dev_java2_description"></p>
                     </li>
                     </section>
                 </ul>
@@ -184,40 +188,40 @@
         <div class="row">
             <div class="col-sm-7 col-sm-offset-5">
                 <ul>
-                    <li class="title"><span class="glyphicon glyphicon-book"></span>FORMATIONS & Certifications</li>
+                    <li class="title"><span class="glyphicon glyphicon-book"></span>{{tab_lang.forma_certif.title}}</li>
                     <li>
-                        <p  class="date">Septembre 2014 -</br>En cours</p>
-                        <p><strong>Étudiant en 1ère année de Master MIAGE</strong></p>
-						<span class="note">Université de Nice Sophia Antipolis</span>
+                        <p  class="date" ng-bind-html="tab_lang.forma_certif.master1_miage_date"></p>
+                        <p><strong>{{tab_lang.forma_certif.master1_miage_title}}</strong></p>
+						<span class="note">{{tab_lang.forma_certif.master1_miage_note}}</span>
                     </li>
                     <li>
-                        <p  class="date">2013</p>
-                        <p><strong>Licence MIAGE</strong></p>
-						<span class="note">Université de Nice Sophia Antipolis - <i>Major de promotion</i></span>
+                        <p  class="date">{{tab_lang.forma_certif.licence_miage_date}}</p>
+                        <p><strong>{{tab_lang.forma_certif.licence_miage_title}}</strong></p>
+						<span class="note" ng-bind-html="tab_lang.forma_certif.licence_miage_note"></span>
                         <p class="description"></p>
                     </li>
 					<li>
-                        <p  class="date">2012</p>
-                        <p><strong>DUT informatique</strong></p>
-						<span class="note">IUT Nice-Sophia Antipolis</span>
+                        <p  class="date">{{tab_lang.forma_certif.dut_date}}</p>
+                        <p><strong>{{tab_lang.forma_certif.dut_title}}</strong></p>
+						<span class="note">{{tab_lang.forma_certif.dut_note}}</span>
                     </li>
 					<li>
-                        <p  class="date">2011</p>
-                        <p><strong>Certification Cisco CCNA 1</strong></p>
+                        <p  class="date">{{tab_lang.forma_certif.cisco_date}}</p>
+                        <p><strong>{{tab_lang.forma_certif.cisco_title}}</strong></p>
 						<span class="note"></i></span>
                         <p class="description"></p>
                     </li>
 					<li>
-                        <p  class="date">2011</p>
-                        <p><strong>Certification Projet Voltaire</strong></p>
+                        <p  class="date">{{tab_lang.forma_certif.voltaire_date}}</p>
+                        <p><strong>{{tab_lang.forma_certif.voltaire_title}}</strong></p>
 						<span class="note"></i></span>
                         <p class="description"></p>
                     </li>
                     <section id="separation">
 					<li>
-                        <p  class="date">2010</p
-                        <p><strong>Bac S spécialité physique</strong></p>
-						<span class="note">Lycée du Parc Impérial - Nice, France - mention AB</span>
+                        <p  class="date">{{tab_lang.forma_certif.bac_date}}</p
+                        <p><strong>{{tab_lang.forma_certif.bac_title}}</strong></p>
+						<span class="note">{{tab_lang.forma_certif.bac_note}}</span>
                     </li>
                     </section>
 					
