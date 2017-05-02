@@ -23,27 +23,37 @@ angular.module('project', ['ngSanitize'])
             title : "Expériences professionnelles",
             nav_title : "Expériences<br>professionnelles",
 
+            // Sogeti
+            sogeti_title : "Ingénieur étude et développement",
+            sogeti_orange_date   : "Février 2016 à aujourd’hui",
+            sogeti_orange_note   : "Sogeti High Tech pour Orange – Sophia Antipolis, France",
+            sogeti_orange_description : "Analyse, conception, rédaction de spécifications techniques et fonctionnelles, de plans de tests, 	développement de solutions en PHP, Javascript, HTML et CSS dans une équipe Agile.<br>Responsable de la brique des tests Selenium/RobotFramework. Développement et mise en place de	logiciels internes en Java liés à l’outil Jenkins et  à l’environnement de tests. Mise en place des nouveaux 	outils et procédures de tests Selenium/RobotFramework et enrichissement de librairies Python.<br>Poste de Scrum Master pendant 6 mois.",
+
+            sogeti_ifce_date   : "Octobre 2015 - Février 2016",
+            sogeti_ifce_note   : "Sogeti High Tech pour l’Institut Français du Cheval et de l’Équitation – Sophia Antipolis, France ",
+            sogeti_ifce_description : "Conception et développement d’un module de gestion de numérisation et de nettoyage de fiches 	signalétiques scannées avec Back End et Web Services en JEE et Front End en PHP (Framework Zend), 	HTML, Javascript, CSS et Bootstrap.",
+
             // Atos
-            atos_title : "Développeur Web",
-            atos_date : "Juillet 2014 - Septembre 2015",
-            atos_note : "Apprentissage - Atos Intégration – Sophia Antipolis, France",
+            atos_title  : "Développeur Web",
+            atos_date   : "Juillet 2014 - Septembre 2015",
+            atos_note   : "Apprentissage - Atos Intégration – Sophia Antipolis, France",
             atos_description : "Recueil et analyse des besoins, rédaction d’un cahier des charges, conception et développement d’outils internes web PHP, HTML, Javascript, CSS et NatStar pour l’analyse de code et la capitalisation de connaissance.<br>Intervention au sein de la Tierce Maintenance Applicative Atos assignée au client RSI.",
 
             // JMC
-            dev_web_title : "Développeur Web",
-            dev_web_date : "2013 - 2015",
-            dev_web_note : "Junior Entreprise – Junior MIAGE Concept – Biot, France",
+            dev_web_title   : "Développeur Web",
+            dev_web_date    : "2013 - 2015",
+            dev_web_note    : "Junior Entreprise – Junior MIAGE Concept – Biot, France",
             dev_web_description : "Développement de sites web avec modules Javascript/PHP pour des clients de Junior MIAGE Concept.",
 
             //Convers
             dev_java1_title : "Développeur Java",
-            dev_java1_date : "Mai - Août 2013",
-            dev_java1_note : "Stage - Convers Télémarketing - Nice, France",
+            dev_java1_date  : "Mai - Août 2013",
+            dev_java1_note  : "Stage - Convers Télémarketing - Nice, France",
             dev_java1_description : "Conception et développement du programme de gestion des ressources humaines pour l'entreprise en Java (MVC).<br>Utilisation de technologies de bases de données comme SQL et JDBC.<br>Conception et développements de programmes annexes en Java tel qu'un Look And Feel configurable.",
 
             dev_java2_title : "Développeur Java",
-            dev_java2_date : "Avril - Juillet 2012",
-            dev_java2_note : "Stage - Convers Télémarketing - Nice, France",
+            dev_java2_date  : "Avril - Juillet 2012",
+            dev_java2_note  : "Stage - Convers Télémarketing - Nice, France",
             dev_java2_description : "Conception et développement du programme du back office en Java (MVC).<br>Développement de composants graphiques et modules Java et intégration dans tous les logiciels existants de l'entreprise.<br>Utilisation de IReport couplé avec JasperReport.<br>Utilisation de technologies de bases de données comme SQL et JDBC."
         },
 
@@ -156,6 +166,17 @@ angular.module('project', ['ngSanitize'])
         experience_pro : {
             title : "Professional experience",
             nav_title : "Professional<br>experience",
+
+            // Sogeti
+            sogeti_title : "Software development engineer",
+            sogeti_orange_date   : "February 2016 - today",
+            sogeti_orange_note   : "Sogeti High Tech for Orange – Sophia Antipolis, France",
+            sogeti_orange_description : "Requirements analysis, design, technical and functional specifications, tests plan, PHP development, 	Javascript, HTML and CSS in an agile team.<br>Selenium/Robotframework tests component manager. Development and implementation of internal 	Java software using Jenkins and linked to the test environment. Implementation of new tools and 	procedures for Selenium/Robotframework testing and enrichment of Python’s libraries.<br>Scrum Master position for 6 months.",
+
+            sogeti_ifce_date   : "October 2015, February 2016",
+            sogeti_ifce_note   : "Sogeti High Tech for « l’Institut Français du Cheval et de l’Équitation »",
+            sogeti_ifce_description : "Design and development of a module to manage digitized forms and cleaning identification sheets with a 	JEE’s Back End and Web Services and a Front End with PHP (Zend Framework), HTML, Javascript, CSS and Bootstrap.",
+
 
             // Atos
             atos_title : "Web developer",

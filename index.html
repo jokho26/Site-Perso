@@ -97,7 +97,7 @@
 <!-- end Navigation for small devices -->
 
 <div id="cartouche-header">
-    <img src="img/face2.jpg" class="portrait">
+    <img src="img/face.jpg" class="portrait">
     <div id="nom"><b>Steven SIDDI</b></div>
     <div id="poste"><i>{{tab_lang.cartouche.titre}}</i></div>
     </br>
@@ -117,14 +117,22 @@
                 <ul>
                     <li class="title"><span class="glyphicon glyphicon-briefcase"></span>{{tab_lang.experience_pro.title}}</li>
                     <li>
-                        <!-- Ajouter les sites -->
+                        <p  class="date">{{tab_lang.experience_pro.sogeti_orange_date}}</p>
+                        <p><strong>{{tab_lang.experience_pro.sogeti_title}}</strong></p>
+                        <span class="note">{{tab_lang.experience_pro.sogeti_orange_note}}</span>
+                        <p class="description"  ng-bind-html="tab_lang.experience_pro.sogeti_orange_description"></p>
+
+                        <p  class="date">{{tab_lang.experience_pro.sogeti_ifce_date}}</p>
+                        <span class="note">{{tab_lang.experience_pro.sogeti_ifce_note}}</span>
+                        <p class="description"  ng-bind-html="tab_lang.experience_pro.sogeti_ifce_description"></p>
+                    </li>
+                    <li>
                         <p  class="date">{{tab_lang.experience_pro.atos_date}}</p>
                         <p><strong>{{tab_lang.experience_pro.atos_title}}</strong></p>
                         <span class="note">{{tab_lang.experience_pro.atos_note}}</span>
                         <p class="description"  ng-bind-html="tab_lang.experience_pro.atos_description"></p>
                     </li>
                     <li>
-                        <!-- Ajouter les sites -->
 						<p  class="date">{{tab_lang.experience_pro.dev_web_date}}</p>
                         <p><strong>{{tab_lang.experience_pro.dev_web_title}}</strong></p>
 						<span class="note">{{tab_lang.experience_pro.dev_web_note}}</span>
@@ -218,22 +226,23 @@
                         <p><strong>{{tab_lang.comp.lang_prog}}</strong></p>
 						<span class="note"></span>
 						<p class="description">
-							<span class="badge">Java</span>
+							<span class="badge">Java EE</span>
+                            <span class="badge">PHP</span>
 							<span class="badge">HTML</span>
 							<span class="badge">Javascript</span>
 							<span class="badge">CSS</span>
 							<span class="badge">JQuery</span>
-							<span class="badge">Java EE</span>
-							<span class="badge">PHP</span>
+							<span class="badge">Java SE</span>
 						</p>
                     </li>
 					<li>
                         <p><strong>Framework</strong></p>
 						<span class="note"></span>
 						<p class="description">
-							<span class="badge">JUnit 4</span>
 							<span class="badge">Bootstrap</span>
 							<span class="badge">AngularJS</span>
+                            <span class="badge">JUnit 4</span>
+                            <span class="badge">Zend</span>
 							<span class="badge">PhoneGap/Cordova</span>
 						</p>
                     </li>
@@ -241,8 +250,9 @@
                         <p><strong>{{tab_lang.comp.conception_gdp}}</strong></p>
 						<span class="note"></span>
 						<p class="description">
+                            <span class="badge">Scrum</span>
+                            <span class="badge">Scrum Master</span>
 							<span class="badge">UML</span>
-							<span class="badge">OCL</span>
 							<span class="badge">{{tab_lang.comp.patrons}}</span>
 							<span class="badge">Git</span>
 							<span class="badge">SVN</span>
@@ -390,7 +400,7 @@
 <br><br><br>
 <center>
     <section class="author">
-        Steven Siddi - 2015
+        Steven Siddi - 2017
     <section>
     <br>
     <section id="powered" class="powered">
