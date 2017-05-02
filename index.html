@@ -10,9 +10,13 @@
     
 <head>
 <meta charset="utf-8">
-<meta name="description" content="description" />
-<meta name="keywords" content="keywords"/>
-<meta name="author" content="BRKOR" />
+<meta name="author" content="Steven SIDDI" />
+<meta name="description" content="Site de Steven Siddi, étudiant et développeur Web/Java.">
+<meta name="keywords" content="Steven Siddi, Steven, Siddi, MIAGE, miage, nice, sophia antipolis, informatique">
+<meta name="robots" content="index">
+<meta name="REVISIT-AFTER" content="7 days">
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Pragma" content="no-cache">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <title>Steven Siddi</title>
 
@@ -24,6 +28,15 @@
 <link rel="stylesheet" media="all" href="css/custom.css" type="text/css"/>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" />
+
+<!-- CSS de chrome -->
+<script type="text/javascript">
+    if (navigator.userAgent.toLowerCase().indexOf('chrome')!=-1){
+        document.write('<link rel="stylesheet" type="text/css" href="css/chrome.css"/>');
+    }
+</script>
 
 <!-- main jquery libraries / others are at the bottom-->
 <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -34,17 +47,10 @@
 <script src="js/CVCtrl.js" type="text/javascript"></script>
 <script src="js/angular-sanitize.min.js"></script>
 
+
+
 </head>
 <body ng-controller="CVCtrl">
-
-<!-- Settings -->
-<!--
-<div class="settings">
-    <span class="glyphicon glyphicon-cog"></span>
-    <a class="btn active top-white">White theme</a>   
-    <a class="btn top-dark">Dark theme</a>
-</div>-->                                              
-<!-- end Settings -->
 
 <!-- Top icons -->
 <a class="top-menu hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="{{tab_lang.cartouche.toggle_menu}}"><span class="glyphicon glyphicon-th-list"></span></a>
@@ -90,23 +96,6 @@
 </nav>
 <!-- end Navigation for small devices -->
 
-<!-- Header -->
-<!--
-<header id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <img src="img/face.jpg" class="face" alt="">
-                <hr class="empty">
-                <p class="header-name">Steven Siddi</p>
-                <p class="header-title">Etudiant et développeur Java/Web</p>
-                <p class="header-subtitle">Bonjour, je m'appelle <b>Steven Siddi</b> et je suis étudiant à l'université de Nice-Sophia Antipolis en <b>Master 1 MIAGE</b>. Passionné d'informatique depuis mon enfance, ...</p>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- end Header -->
-
 <div id="cartouche-header">
     <img src="img/face2.jpg" class="portrait">
     <div id="nom"><b>Steven SIDDI</b></div>
@@ -120,37 +109,6 @@
 </div>
 </br></br></br></br></br></br>
 
-<!-- Profile --><!--
-<section id="profile" class="profile activate">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-7 col-sm-offset-5">
-                
-                    <ul>
-                        <li class="title"><span class="glyphicon glyphicon-user"></span>Profile</li>
-                        <li>
-                            <span class="note">Full name</span>
-                            <p><strong>Mark William Connor</strong></p>
-                        </li>
-                        <li>
-                            <span class="note">Born</span>
-                            <p><strong>01 July 1990</strong></p>
-                            <p><strong>Melbourne, Australia</strong></p>
-                        </li>
-                        
-                        <section id="separation">
-                        <li>
-                            <span class="note">LinkedIn Profile</span>
-                            <p><strong><a href="#">https://www.linkedin.com/markwilliamconnor</a></strong></p>
-                        </li>
-                        </section>
-                    </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Profile -->
-
 <!-- Work experience -->
 <section id="work-experience" class="work-experience">
     <div class="container">
@@ -160,9 +118,15 @@
                     <li class="title"><span class="glyphicon glyphicon-briefcase"></span>{{tab_lang.experience_pro.title}}</li>
                     <li>
                         <!-- Ajouter les sites -->
+                        <p  class="date">{{tab_lang.experience_pro.atos_date}}</p>
+                        <p><strong>{{tab_lang.experience_pro.atos_title}}</strong></p>
+                        <span class="note">{{tab_lang.experience_pro.atos_note}}</span>
+                        <p class="description"  ng-bind-html="tab_lang.experience_pro.atos_description"></p>
+                    </li>
+                    <li>
+                        <!-- Ajouter les sites -->
 						<p  class="date">{{tab_lang.experience_pro.dev_web_date}}</p>
                         <p><strong>{{tab_lang.experience_pro.dev_web_title}}</strong></p>
-						
 						<span class="note">{{tab_lang.experience_pro.dev_web_note}}</span>
                         <p class="description">{{tab_lang.experience_pro.dev_web_description}}</p>
                     </li>
@@ -195,9 +159,14 @@
                 <ul>
                     <li class="title"><span class="glyphicon glyphicon-book"></span>{{tab_lang.forma_certif.title}}</li>
                     <li>
+                        <p  class="date" ng-bind-html="tab_lang.forma_certif.mbds_date"></p>
+                        <p><strong>{{tab_lang.forma_certif.mbds_title}}</strong></p>
+                        <span class="note" ng-bind-html="tab_lang.forma_certif.mbds_note">"</span>
+                    </li>
+                    <li>
                         <p  class="date" ng-bind-html="tab_lang.forma_certif.master1_miage_date"></p>
                         <p><strong>{{tab_lang.forma_certif.master1_miage_title}}</strong></p>
-						<span class="note">{{tab_lang.forma_certif.master1_miage_note}}</span>
+						<span class="note" ng-bind-html="tab_lang.forma_certif.master1_miage_note"></span>
                     </li>
                     <li>
                         <p  class="date">{{tab_lang.forma_certif.licence_miage_date}}</p>
@@ -305,9 +274,32 @@
             <div class="col-sm-7 col-sm-offset-5">
                 <ul>
                     <li class="title"><span class="glyphicon glyphicon-stats"></span>{{tab_lang.trav_pro.title}}</li>
-                     <li>
+                    <li class="liChrome" style="padding-top:30px;">
+                        
+                        <div class="description-projet" style="width:100%">
+                            <p><strong>{{tab_lang.trav_pro.graphasc_title}}</strong></p>
+                            <span class="note"></span>
+                            <p class="description" ng-bind-html="tab_lang.trav_pro.graphasc_description">
+                            </p>
+                        </div>
+
+                    </li>
+
+                     <li class="liChrome">
+                        <a target="navigateur" href="https://github.com/jokho26/InstaMiam">
+                            <img src="./img/miam.png" class="img-projet2 imgChrome">
+                        </a>
+                        <div class="description-projet">
+                            <p><strong>{{tab_lang.trav_pro.instamiam_title}}</strong></p>
+                            <span class="note"></span>
+                            <p class="description" ng-bind-html="tab_lang.trav_pro.instamiam_description">
+                            </p>
+                        </div>
+
+                    </li>
+                     <li class="liChrome">
                         <a target="navigateur" href="https://github.com/haxakl/RunBelievable">
-                            <img src="./img/cordova.png" class="img-projet2">
+                            <img src="./img/cordova.png" class="img-projet2 imgChrome">
                         </a>
                         <div class="description-projet">
                             <p><strong>{{tab_lang.trav_pro.run_title}}</strong></p>
@@ -318,9 +310,9 @@
                         </div>
 
                     </li>
-					<li>
+					<li class="liChrome">
                         <a target="navigateur" href="http://miage.unice.fr/">
-                            <img src="./img/site-miage.jpg" class="img-projet">
+                            <img src="./img/site-miage.jpg" class="img-projet imgChrome">
                         </a>
                         <div class="description-projet">
                             <p><strong>{{tab_lang.trav_pro.miage_title}}</strong></p>
@@ -333,9 +325,9 @@
                     </li>
 
                     <section id="separation">
-                    <li>
+                    <li class="liChrome">
                         <a target="navigateur" href="http://votre-voyance-en-ligne.net/">
-                            <img src="./img/site-voyance.jpg" class="img-projet">
+                            <img src="./img/site-voyance.jpg" class="img-projet imgChrome">
                         </a>
                         <div class="description-projet">
                             <p><strong>{{tab_lang.trav_pro.voyance_title}}</strong></p>
@@ -353,87 +345,6 @@
 </section>
 <!-- end Personal skills -->
     
-<!-- Interests --><!--
-<section id="interests" class="interests">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-7 col-sm-offset-5">
-                <ul>
-                    <li class="title"><span class="glyphicon glyphicon-heart-empty"></span>CENTRES D’INTERET</li>
-                    <li>
-                        <p><strong>Informatique</strong></p>
-                        <p class="description">Passioné d'informatique, j'ai depuis mon enfance su que je travaillerai dans ce secteur.</p>
-                    </li>
-                    <li>
-                        <p><strong>Musique</strong></p>
-                        <p class="description">Je joue de la guitare depuis bientôt 4 ans.</p>
-                    </li>
-                    <section id="separation">
-                        <li>
-                            <p><strong>Basketball</strong></p>
-                            <p class="description">Maecenas velit eros, congue quis accumsan sed, consequat id magna. Pellentesque at auctor lacus.</p>
-                        </li>
-                    </section>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Interests -->
-    
-<!-- Portfolio --><!--
-<section id="portfolio" class="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-7 col-sm-offset-5">
-                <ul>
-                    <li class="title"><span class="glyphicon glyphicon-eye-open"></span>Portfolio</li>
-                    <li class="static">
-					
-                        <img src="img/1.jpg" alt="" data-toggle="modal" data-target="#modal1">
-                        <img src="img/2.jpg" alt="" data-toggle="modal" data-target="#modal2">
-                        <img src="img/3.jpg" alt="" data-toggle="modal" data-target="#modal3">
-                        <img src="img/4.jpg" alt="" data-toggle="modal" data-target="#modal4">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Portfolio -->
-    
-<!-- Modal - photos in zoom-->
-<!--
-<div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-box">
-            <img src="img/1.jpg" alt="">
-        </div>
-    </div>
-</div>
-<div id="modal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-box">
-            <img src="img/2.jpg" alt="">
-        </div>
-    </div>
-</div>
-<div id="modal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal3" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-box">
-            <img src="img/3.jpg" alt="">
-        </div>
-    </div>
-</div>
-<div id="modal4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal4" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-box">
-            <img src="img/4.jpg" alt="">
-        </div>
-    </div>
-</div>
-<!-- end Modal - photos in zoom-->
-    
 <!-- Contact -->
 <section id="contact" class="contact">
     <div class="container">
@@ -448,7 +359,7 @@
                         <strong>steven.siddi@gmail.com</strong></a>
                         </p>
                         <hr class="empty">
-                        <form action="http://go3.nazwa.pl/resume-timeline/contact.php" method="post">
+                        <form id="formcontact" method="post">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                                 <input name="yourname" type="text" class="form-control" id="inputname" placeholder="{{tab_lang.contact.nom}}">
@@ -476,7 +387,16 @@
     </div>
 </section>
 <!-- end Contact -->
-
+<br><br><br>
+<center>
+    <section class="author">
+        Steven Siddi - 2015
+    <section>
+    <br>
+    <section id="powered" class="powered">
+        <i>Powered By AngularJS, Ajax and PHP</i>
+    </section>
+</center>
 <!-- Java Script -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/bootstrap.min.js"></script>
@@ -486,6 +406,6 @@
 <!-- Charts -->
 <script src="js/jquery.easypiechart.js"></script>
 <script src="js/chart.js"></script>
-
+<script src="js/mail.js"></script>
 </body>
 </html>

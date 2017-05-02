@@ -13,7 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     padding-top: 50px;
-    padding-bottom: 10%;
+    padding-bottom: 1%;
 	overflow-x: hidden;
 }
 
@@ -721,6 +721,7 @@ form .glyphicon {
 	opacity: 0.75;
     text-transform: uppercase;
     min-width: 130px;
+    width: 0;
 }
 
 .img-projet {
@@ -746,4 +747,12 @@ form .glyphicon {
     position: fixed;
     right:15px;
     top:45px;
+}
+
+.author {
+    font-size:15px;
+}
+
+.powered {
+    font-size:11px;
 }

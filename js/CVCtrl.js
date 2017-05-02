@@ -10,7 +10,7 @@ angular.module('project', ['ngSanitize'])
         },
 
         cartouche : {
-            titre : "Étudiant et développeur Java/Web",
+            titre : "Développeur web Java/PHP",
             CV : "CV",
 
             toggle_menu : "Afficher/masquer le menu",
@@ -23,11 +23,19 @@ angular.module('project', ['ngSanitize'])
             title : "Expériences professionnelles",
             nav_title : "Expériences<br>professionnelles",
 
+            // Atos
+            atos_title : "Développeur Web",
+            atos_date : "Juillet 2014 - Septembre 2015",
+            atos_note : "Apprentissage - Atos Intégration – Sophia Antipolis, France",
+            atos_description : "Recueil et analyse des besoins, rédaction d’un cahier des charges, conception et développement d’outils internes web PHP, HTML, Javascript, CSS et NatStar pour l’analyse de code et la capitalisation de connaissance.<br>Intervention au sein de la Tierce Maintenance Applicative Atos assignée au client RSI.",
+
+            // JMC
             dev_web_title : "Développeur Web",
-            dev_web_date : "2013 - En cours",
+            dev_web_date : "2013 - 2015",
             dev_web_note : "Junior Entreprise – Junior MIAGE Concept – Biot, France",
             dev_web_description : "Développement de sites web avec modules Javascript/PHP pour des clients de Junior MIAGE Concept.",
 
+            //Convers
             dev_java1_title : "Développeur Java",
             dev_java1_date : "Mai - Août 2013",
             dev_java1_note : "Stage - Convers Télémarketing - Nice, France",
@@ -44,9 +52,13 @@ angular.module('project', ['ngSanitize'])
             title : "FORMATIONS & Certifications",
             nav_title : "FORMATIONS &<br>Certifications",
 
-            master1_miage_title : "Étudiant en 1ère année de Master MIAGE",
-            master1_miage_date : "Septembre 2014 -<br>En cours",
-            master1_miage_note : "Université de Nice Sophia Antipolis",
+            mbds_title : "Master 2 MIAGE MBDS (Mobiquité, Base de données et intégration Systèmes)",
+            mbds_date : "2015",
+            mbds_note : "Université de Nice Sophia Antipolis",
+
+            master1_miage_title : "Master 1 MIAGE",
+            master1_miage_date : "2014",
+            master1_miage_note : "Université de Nice Sophia Antipolis - <i>Major de promotion</i>",
 
             licence_miage_title : "Licence MIAGE",
             licence_miage_date : "2013",
@@ -87,7 +99,15 @@ angular.module('project', ['ngSanitize'])
             title : "Travaux et projets",
             nav_title : "Travaux et projets",
 
-            run_title : "Application mobile pour l'analyse de performances sportives",
+            graphasc_title : "GraphASC",
+            graphasc_description : "Outil Web interne destiné à la TMA Atos assigné au client RSI pour la facilitation des processus de développement internes et à la capitalisation de connaissance dans l'équipe de TMA.<br>Développé en respectant un modèle MVC, et utilisant les technologies HTML5, JavaScript/JQuery, CSS, PHP et SQL.<br>La fonctionnalité principale est la création de graphes de dépendance dynamiques construits à la volée avec la librairie JavaScript GoJS, pour une visualisation de l'architecture du projet NatStar du RSI. Les données sont extraites à partir de l’export texte de l’IDE NatStar, parsé dans une base de données avec un parseur PHP également développé dans le cadre du projet.",
+
+
+            instamiam_title : "Instamiam",
+            instamiam_description : "Projet Web étudiant d'hébergement de photos et intégration d'un système de réseau social (mur d'actualités, commentaires ...).<br>Réalisé avec les technologies : HTML5, JavaScript, AngularJs, JQuery, CSS, JEE, Ajax, SQL, EJB/SQL.<br><a href=\"http://slides.com/christianpavinich/presentation-instamiam#/\">Lien vers la présentation du projet</a>",
+
+
+            run_title : "Application mobile pour l'analyse de performances sportive",
             run_description : "Application mobile développée en HTML5, utilisant le framework PhoneGap/Cordova afin de produire une application multiplateforme Android et iOS pour le suivi et l'analyse de performance sportives (courses à pieds, séances d'entrainement, vélo ...).",
 
             miage_title : "Site de la formation MIAGE de Nice-Sophia Antipolis",
@@ -124,7 +144,7 @@ angular.module('project', ['ngSanitize'])
         },
 
         cartouche : {
-            titre : "Student and Java/Web developer",
+            titre : "Web developer Java/PHP",
             CV : "Resume",
 
             toggle_menu : "Toggle the menu",
@@ -137,6 +157,12 @@ angular.module('project', ['ngSanitize'])
             title : "Professional experience",
             nav_title : "Professional<br>experience",
 
+            // Atos
+            atos_title : "Web developer",
+            atos_date : "July 2014 - September 2015",
+            atos_note : "Apprenticeship - Atos Intégration – Sophia Antipolis, France",
+            atos_description : "Requirements analysis, specifications, design and development of internal web tools in PHP, HTML, Javascript, CSS and Natsar for code analysis and knowledge capitalization.<br>Intervention inside the Atos\’ Application Management Team for the RSI.",
+
             dev_web_title : "Web developer",
             dev_web_date : "2013 - Ongoing",
             dev_web_note : "Junior Entreprise – Junior MIAGE Concept – Biot, France",
@@ -145,12 +171,12 @@ angular.module('project', ['ngSanitize'])
             dev_java1_title : "Java developer",
             dev_java1_date : "May - August 2013",
             dev_java1_note : "Intership - Convers Télémarketing - Nice, France",
-            dev_java1_description : "Design and development of the program of human resources management for the company in Java (MVC).<br>Use of database technologies such as SQL and JDBC.<br>Design and development of side programs such as a Java Look And Feel.",
+            dev_java1_description : "Design and development of the human resources management for the company in Java (MVC).<br>Use of database technologies such as SQL and JDBC.<br>Design and development of side programs such as a Java Look And Feel.",
 
             dev_java2_title : "Java developper",
             dev_java2_date : "April - July 2012",
             dev_java2_note : "Internship - Convers Télémarketing - Nice, France",
-            dev_java2_description : "Design and development of the program for back office in Java (MVC).<br>Development of Java graphical components and modules and integration into all the existing softwares of the company.<br>Use of IReport with JasperReport for reporting.<br>Use of database technologies such as SQL and JDBC."
+            dev_java2_description : "Design and development of the back office program in Java (MVC).<br>Development of Java graphical components and modules and integration into all the existing softwares of the company.<br>Use of IReport with JasperReport for reporting.<br>Use of database technologies such as SQL and JDBC."
         },
 
         /* Formations et certifications */
@@ -158,9 +184,13 @@ angular.module('project', ['ngSanitize'])
             title : "Education & Certifications",
             nav_title : "Education &<br>Certifications",
 
-            master1_miage_title : "1st year of a 2-year Master’s Degree program in MIAGE",
-            master1_miage_date : "September 2014 -<br>Ongoing",
-            master1_miage_note : "University of Nice Sophia Antipolis",
+            mbds_title : "Master 2 Degree in MIAGE MBDS (Mobiquity, Databases and System Integration)",
+            mbds_date : "2015",
+            mbds_note : "University of Nice Sophia Antipolis",
+
+            master1_miage_title : "Master 1 Degree in MIAGE",
+            master1_miage_date : "2014",
+            master1_miage_note : "University of Nice Sophia Antipolis - <i>Valedictorian</i>",
 
             licence_miage_title : "Licence in MIAGE (equivalent to a Bachelor’s Degree)",
             licence_miage_date : "2013",
@@ -201,8 +231,15 @@ angular.module('project', ['ngSanitize'])
             title : "Work and projects",
             nav_title : "Work and projects",
 
+             graphasc_title : "GraphASC",
+            graphasc_description : "Internal web application for the AMT Atos, assigned to the client RSI, to shorten development process and knowledge capitalization.<br>This application was developped with the MCS design pattern, in HTML5, JavaScript/JQuery, CSS, PHP and SQL.<br>The main functionnality is the creation of dynamicals dependencies graphs with the Javascript Library GoJS,  in order to display the architecture of the NatStar projet of the RSI. The data were extract from a text export with the IDE NatStar and parsed in the databases with a NatStar parser developped in PHP for the needs of the project.",
+
+            instamiam_title : "Instamiam",
+            instamiam_description : "Student web project of photo hosting and social network integration (news, commentaries ...).<br>Developped in HTML5, JavaScript, AngularJs, JQuery, CSS, JEE, Ajax, SQL, EJB/SQL.<br><a href=\"http://slides.com/christianpavinich/presentation-instamiam#/\">Link to the project's presentation</a>",
+
+
             run_title : "Mobile application for sport performance analysis",
-            run_description : "Mobile application developed in HTML5, using the framework PhoneGap/Cordova to make a multiplatform application on Android and iOS for sport performance analysis (foot races, training sessions, bike ...).",
+            run_description : "Mobile application developed in HTML5, using the PhoneGap/Cordova framework to make a multiplatform application on Android and iOS for sport performance analysis (foot races, training sessions, bike ...).",
 
             miage_title : "MIAGE of Nice-Sophia Antipolis website",
             miage_description : "Website of MIAGE of Nice-Sophia Antipolis with Javascript/Jquery/PHP modules related to enrollment and training.",
